@@ -1,0 +1,41 @@
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, sans-serif; color: #202b3c; background: #f5f7fb; }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 20px 7%;
+ background: white; position: sticky; top: 0; z-index: 5; box-shadow: 0 2px 12px #18243a12; }
+.brand { color: #6b4bd1; font-size: 1.25rem; font-weight: 800; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 17px; }
+nav a { color: #48556a; text-decoration: none; font-size: .9rem; font-weight: 600; }
+nav a:hover { color: #6b4bd1; }
+.intro { min-height: 430px; padding: 75px 9%; display: flex; align-items: center; justify-content: space-between;
+ gap: 35px; background: linear-gradient(120deg,#eeeaff,#fff); }
+.tag { color: #6b4bd1; font-size: .75rem; letter-spacing: 2px; font-weight: 800; }
+h1 { font-size: clamp(2.7rem,6vw,4.5rem); margin: 12px 0; }
+h1 span { color: #6b4bd1; }
+.intro h2 { font-size: 1.3rem; color: #58657a; }
+.intro p:not(.tag) { max-width: 520px; color: #64718a; line-height: 1.7; }
+.profile-mark { width: 210px; height: 210px; border-radius: 50%; display: grid; place-items: center;
+ color: white; font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg,#6b4bd1,#a58df5); }
+.button { display: inline-block; margin-top: 12px; padding: 13px 21px; border-radius: 8px;
+ background: #6b4bd1; color: white; text-decoration: none; font-weight: 700; }
+.panel { max-width: 1050px; margin: 25px auto; padding: 35px; background: white; border-radius: 15px;
+ box-shadow: 0 5px 22px #18243a0b; }
+.panel h2 { color: #6b4bd1; margin-top: 0; }
+.panel p { color: #64718a; line-height: 1.7; }
+.skills { display: flex; flex-wrap: wrap; gap: 12px; }
+.skills span { background: #eeeaff; color: #5237b4; padding: 10px 16px; border-radius: 20px; font-weight: 700; }
+.projects { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.projects article { padding: 20px; border: 1px solid #e7e3f7; border-radius: 12px; }
+.projects h3, .timeline h3 { margin-bottom: 5px; }
+.muted { font-size: .9rem; }
+.contact { text-align: center; }
+footer { padding: 25px; text-align: center; color: #64718a; }
+@media (max-width: 720px) {
+ .header { flex-direction: column; gap: 15px; }
+ nav { justify-content: center; }
+ .intro { flex-direction: column-reverse; text-align: center; }
+ .profile-mark { width: 150px; height: 150px; font-size: 2.5rem; }
+ .projects { grid-template-columns: 1fr; }
+ .panel { margin: 16px; padding: 25px; }
+}
